@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="bg-linear-to-b from-primary/5 via-muted/50 to-background py-20 px-4">
+      <section className="bg-linear-to-b from-primary/5 via-muted/50 to-background py-12 md:py-20 px-4">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary">
@@ -31,7 +31,7 @@ export default function Home() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-20 px-4">
+      <section className="py-12 md:py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Unsere Dienstleistungen</h2>
@@ -135,7 +135,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="bg-linear-to-b from-primary/5 to-muted/50 py-20 px-4">
+      <section className="bg-linear-to-b from-primary/5 to-muted/50 py-12 md:py-20 px-4">
         <div className="container mx-auto max-w-4xl">
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Über uns</h2>
@@ -160,7 +160,7 @@ export default function Home() {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-20 px-4 bg-primary/3">
+      <section className="py-12 md:py-20 px-4 bg-primary/3">
         <div className="container mx-auto max-w-4xl text-center space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold">Kontaktieren Sie uns</h2>
           <p className="text-lg text-muted-foreground">

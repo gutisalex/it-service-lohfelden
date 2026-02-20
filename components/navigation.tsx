@@ -20,16 +20,24 @@ export function Navigation() {
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <Link
           href="/"
-          className="flex shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"
+          className="flex shrink-0 items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"
         >
           <Image
             src="/logo.png"
             alt="IT-Service und Beratung Lohfelden"
             width={320}
             height={56}
-            className="h-20 w-auto object-contain"
+            className="h-16 w-auto object-contain"
             priority
           />
+          <span className="hidden md:flex flex-col">
+            <span className="text-2xl font-bold italic text-primary leading-tight">
+              - Service und Beratung
+            </span>
+            <span className="text-xs font-bold italic text-foreground leading-tight text-center">
+              Reinhold Jodeit - Meisterbetrieb
+            </span>
+          </span>
         </Link>
         <ul className="flex gap-6">
           {navItems.map((item) => (

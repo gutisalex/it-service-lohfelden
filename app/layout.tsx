@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Open_Sans, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 
-const geistSans = Geist({
+/** Sans font matching logo: bold italic sans (Open Sans ≈ Arial/Helvetica-style) */
+const openSans = Open_Sans({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  style: ["normal", "italic"],
 });
 
 const geistMono = Geist_Mono({
@@ -27,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
+        className={`${openSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
         <Navigation />
         <main className="flex-1">{children}</main>

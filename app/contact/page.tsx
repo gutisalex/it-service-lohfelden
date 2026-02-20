@@ -70,7 +70,7 @@ export default function ContactPage() {
           <CardContent>
             <div className="aspect-video bg-muted rounded-lg overflow-hidden">
               <iframe
-                src="https://www.openstreetmap.org/export/embed.html?bbox=9.552%2C51.281%2C9.572%2C51.291&layer=mapnik&marker=51.286%2C9.562"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=9.537%2C51.267%2C9.558%2C51.287&layer=mapnik&marker=51.2765779%2C9.5474161"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -83,7 +83,7 @@ export default function ContactPage() {
                 Unser Ladengeschäft und unsere Werkstatt befinden sich in der Rundstraße 30 in Lohfelden.
               </p>
               <a
-                href="https://www.openstreetmap.org/?mlat=51.286&mlon=9.562#map=16/51.286/9.562"
+                href="https://www.openstreetmap.org/?mlat=51.2765779&mlon=9.5474161#map=16/51.2765779/9.5474161"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:underline"

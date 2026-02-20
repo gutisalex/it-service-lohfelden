@@ -6,10 +6,10 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-muted/50 to-background py-20 px-4">
+      <section className="bg-linear-to-b from-muted/50 to-background py-20 px-4">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center space-y-6">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary">
               IT-Service und Beratung Lohfelden
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">

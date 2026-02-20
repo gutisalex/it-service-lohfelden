@@ -29,7 +29,7 @@ export default function PrivacyPage() {
               Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten 
               Server-Log Files, die Ihr Browser automatisch an uns übermittelt. Dies sind:
             </p>
-            <ul className="list-disc list-inside space-y-1 mb-4">
+            <ul className="list-disc pl-3 space-y-1 mb-4">
               <li>Browsertyp und Browserversion</li>
               <li>verwendetes Betriebssystem</li>
               <li>Referrer URL</li>

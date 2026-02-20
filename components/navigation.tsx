@@ -35,9 +35,9 @@ function NavLinks({
             href={item.href}
             onClick={onLinkClick}
             className={cn(
-              "text-sm font-medium transition-colors hover:text-primary",
+              "text-sm font-medium transition-colors hover:text-primary relative py-1",
               pathname === item.href
-                ? "text-foreground"
+                ? "text-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-primary after:rounded-full"
                 : "text-muted-foreground",
             )}
           >

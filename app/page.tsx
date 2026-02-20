@@ -6,13 +6,13 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="bg-linear-to-b from-muted/50 to-background py-20 px-4">
+      <section className="bg-linear-to-b from-primary/5 via-muted/50 to-background py-20 px-4">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary">
               IT-Service und Beratung Lohfelden
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto italic">
               Qualität spricht sich herum
             </p>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -47,10 +47,10 @@ export default function Home() {
                 <CardDescription>Fernseher Reparatur & Installation</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Reparatur von Fernsehern</li>
-                  <li>• Installation von Neugeräten</li>
-                  <li>• Wandhalterung & Einrichtung</li>
+                <ul className="list-disc pl-3 space-y-2 text-sm text-muted-foreground">
+                  <li>Reparatur von Fernsehern</li>
+                  <li>Installation von Neugeräten</li>
+                  <li>Wandhalterung & Einrichtung</li>
                 </ul>
               </CardContent>
             </Card>
@@ -61,10 +61,10 @@ export default function Home() {
                 <CardDescription>PC & Laptop Reparatur</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Reparatur von PCs & Druckern</li>
-                  <li>• Datensicherung</li>
-                  <li>• Installation & Netzwerkaufbau</li>
+                <ul className="list-disc pl-3 space-y-2 text-sm text-muted-foreground">
+                  <li>Reparatur von PCs & Druckern</li>
+                  <li>Datensicherung</li>
+                  <li>Installation & Netzwerkaufbau</li>
                 </ul>
               </CardContent>
             </Card>
@@ -75,10 +75,10 @@ export default function Home() {
                 <CardDescription>Satelliten-Antennen Installation</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Befestigung & Einmessen</li>
-                  <li>• Umrüstung auf Digital</li>
-                  <li>• Kabel verlegen</li>
+                <ul className="list-disc pl-3 space-y-2 text-sm text-muted-foreground">
+                  <li>Befestigung & Einmessen</li>
+                  <li>Umrüstung auf Digital</li>
+                  <li>Kabel verlegen</li>
                 </ul>
               </CardContent>
             </Card>
@@ -89,10 +89,10 @@ export default function Home() {
                 <CardDescription>Hifi-Geräte Reparatur</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Verstärker & CD-Player</li>
-                  <li>• Kassettendecks</li>
-                  <li>• Röhrenverstärker</li>
+                <ul className="list-disc pl-3 space-y-2 text-sm text-muted-foreground">
+                  <li>Verstärker & CD-Player</li>
+                  <li>Kassettendecks</li>
+                  <li>Röhrenverstärker</li>
                 </ul>
               </CardContent>
             </Card>
@@ -103,10 +103,10 @@ export default function Home() {
                 <CardDescription>Reparatur & Wartung</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Reparatur & Revision</li>
-                  <li>• Brüheinheit überholen</li>
-                  <li>• Mahlwerk austauschen</li>
+                <ul className="list-disc pl-3 space-y-2 text-sm text-muted-foreground">
+                  <li>Reparatur & Revision</li>
+                  <li>Brüheinheit überholen</li>
+                  <li>Mahlwerk austauschen</li>
                 </ul>
               </CardContent>
             </Card>
@@ -117,10 +117,10 @@ export default function Home() {
                 <CardDescription>Kompetente Kaufberatung</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• TV & Audio Geräte</li>
-                  <li>• Computer & Notebooks</li>
-                  <li>• Netzwerktechnik</li>
+                <ul className="list-disc pl-3 space-y-2 text-sm text-muted-foreground">
+                  <li>TV & Audio Geräte</li>
+                  <li>Computer & Notebooks</li>
+                  <li>Netzwerktechnik</li>
                 </ul>
               </CardContent>
             </Card>
@@ -135,7 +135,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="bg-muted/50 py-20 px-4">
+      <section className="bg-linear-to-b from-primary/5 to-muted/50 py-20 px-4">
         <div className="container mx-auto max-w-4xl">
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Über uns</h2>
@@ -160,14 +160,19 @@ export default function Home() {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-primary/3">
         <div className="container mx-auto max-w-4xl text-center space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold">Kontaktieren Sie uns</h2>
           <p className="text-lg text-muted-foreground">
             Rufen Sie noch heute bei uns an und lassen Sie sich einen Termin geben.
           </p>
           <div className="space-y-2">
-            <p className="text-2xl font-semibold">0561 - 5190446</p>
+            <a
+              href="tel:+495615190446"
+              className="text-2xl font-semibold text-primary hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"
+            >
+              0561 - 5190446
+            </a>
             <p className="text-sm text-muted-foreground">Termine nur nach Absprache möglich</p>
           </div>
           <Button asChild size="lg">

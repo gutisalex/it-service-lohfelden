@@ -27,7 +27,10 @@ export default function ContactPage() {
               </div>
               <div>
                 <p className="font-semibold mb-1">Telefon</p>
-                <a href="tel:+4956151904446" className="text-muted-foreground hover:text-foreground transition-colors">
+                <a
+                  href="tel:+495615190446"
+                  className="text-primary hover:underline transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"
+                >
                   0561 - 5190446
                 </a>
               </div>
@@ -52,9 +55,9 @@ export default function ContactPage() {
                 <p className="text-muted-foreground">
                   Bitte rufen Sie uns an, um einen Termin zu vereinbaren:
                 </p>
-                <a 
-                  href="tel:+4956151904446" 
-                  className="block text-center text-xl font-semibold hover:text-primary transition-colors"
+                <a
+                  href="tel:+495615190446"
+                  className="block text-center text-xl font-semibold text-primary hover:underline transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"
                 >
                   0561 - 5190446
                 </a>

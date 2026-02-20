@@ -20,19 +20,10 @@ export default function ServicesPage() {
               <CardDescription>Reparatur und Installation von Fernsehgeräten</CardDescription>
             </CardHeader>
             <CardContent>
-              <ul className="space-y-3 text-muted-foreground">
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Reparatur von Fernsehern aller Marken und Modelle</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Abholung des Geräts und bei Bedarf Aufstellen eines Leihgeräts</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Installation von Neugeräten (Wandhalterung, Programmbelegung)</span>
-                </li>
+              <ul className="list-disc pl-3 space-y-3 text-muted-foreground">
+                <li>Reparatur von Fernsehern aller Marken und Modelle</li>
+                <li>Abholung des Geräts und bei Bedarf Aufstellen eines Leihgeräts</li>
+                <li>Installation von Neugeräten (Wandhalterung, Programmbelegung)</li>
               </ul>
             </CardContent>
           </Card>
@@ -44,47 +35,17 @@ export default function ServicesPage() {
               <CardDescription>Umfassende PC- und Netzwerkdienstleistungen</CardDescription>
             </CardHeader>
             <CardContent>
-              <ul className="space-y-3 text-muted-foreground">
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Reparaturen von PCs und Druckern</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Datensicherung und Datenrettung</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Komplett-Installationen Windows, Linux oder Mac OS</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Hardwareaustausch und Aufrüstung</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Kaufberatung von PCs und Notebooks</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Zusammenstellung eines individuellen PC-Setups nach Ihren Wünschen</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Einrichtung Ihres Internet-Anschlusses</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Einrichtung eines Netzwerkes (Privat oder Firmennetzwerk)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Einrichtung von Linux oder Windows Servern mit Datensicherung</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Optimierung von Heimnetzwerken (Smarthome)</span>
-                </li>
+              <ul className="list-disc pl-3 space-y-3 text-muted-foreground">
+                <li>Reparaturen von PCs und Druckern</li>
+                <li>Datensicherung und Datenrettung</li>
+                <li>Komplett-Installationen Windows, Linux oder Mac OS</li>
+                <li>Hardwareaustausch und Aufrüstung</li>
+                <li>Kaufberatung von PCs und Notebooks</li>
+                <li>Zusammenstellung eines individuellen PC-Setups nach Ihren Wünschen</li>
+                <li>Einrichtung Ihres Internet-Anschlusses</li>
+                <li>Einrichtung eines Netzwerkes (Privat oder Firmennetzwerk)</li>
+                <li>Einrichtung von Linux oder Windows Servern mit Datensicherung</li>
+                <li>Optimierung von Heimnetzwerken (Smarthome)</li>
               </ul>
             </CardContent>
           </Card>
@@ -96,23 +57,11 @@ export default function ServicesPage() {
               <CardDescription>Installation und Einrichtung von Satelliten-Antennen</CardDescription>
             </CardHeader>
             <CardContent>
-              <ul className="space-y-3 text-muted-foreground">
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Umrüstung des analogen Anschlusses auf einen digitalen Anschluss</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Befestigung des Spiegels</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Optimales Einmessen der Antenne anhand diverser Messgeräte</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Kabel verlegen und Dosen setzen</span>
-                </li>
+              <ul className="list-disc pl-3 space-y-3 text-muted-foreground">
+                <li>Umrüstung des analogen Anschlusses auf einen digitalen Anschluss</li>
+                <li>Befestigung des Spiegels</li>
+                <li>Optimales Einmessen der Antenne anhand diverser Messgeräte</li>
+                <li>Kabel verlegen und Dosen setzen</li>
               </ul>
             </CardContent>
           </Card>
@@ -124,31 +73,13 @@ export default function ServicesPage() {
               <CardDescription>Reparatur von Audio- und Hifi-Geräten</CardDescription>
             </CardHeader>
             <CardContent>
-              <ul className="space-y-3 text-muted-foreground">
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Reparaturen von Videorecordern, Tonkopfreinigung</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Transistorverstärker</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Kassettendecks</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>CD-Player</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Röhrenverstärker</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Spulentonbandgeräte</span>
-                </li>
+              <ul className="list-disc pl-3 space-y-3 text-muted-foreground">
+                <li>Reparaturen von Videorecordern, Tonkopfreinigung</li>
+                <li>Transistorverstärker</li>
+                <li>Kassettendecks</li>
+                <li>CD-Player</li>
+                <li>Röhrenverstärker</li>
+                <li>Spulentonbandgeräte</li>
               </ul>
             </CardContent>
           </Card>
@@ -160,35 +91,14 @@ export default function ServicesPage() {
               <CardDescription>Professionelle Reparatur und Wartung</CardDescription>
             </CardHeader>
             <CardContent>
-              <ul className="space-y-3 text-muted-foreground">
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Reparaturen von Kaffeevollautomaten</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Aus- und Einbau der Brüheinheit</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Aus- und Einbau des Mahlwerks</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Überholen und Revidieren der Brüheinheit</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Überholen und Revidieren des Drainageventils</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Ersetzen und Justieren der Mahlscheiben</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Überholen und Revidieren des Auslaufventils</span>
-                </li>
+              <ul className="list-disc pl-3 space-y-3 text-muted-foreground">
+                <li>Reparaturen von Kaffeevollautomaten</li>
+                <li>Aus- und Einbau der Brüheinheit</li>
+                <li>Aus- und Einbau des Mahlwerks</li>
+                <li>Überholen und Revidieren der Brüheinheit</li>
+                <li>Überholen und Revidieren des Drainageventils</li>
+                <li>Ersetzen und Justieren der Mahlscheiben</li>
+                <li>Überholen und Revidieren des Auslaufventils</li>
               </ul>
             </CardContent>
           </Card>
@@ -200,7 +110,12 @@ export default function ServicesPage() {
           <p className="text-muted-foreground">
             Kontaktieren Sie uns für eine persönliche Beratung oder einen Reparaturtermin.
           </p>
-          <p className="text-xl font-semibold">Tel: 0561 - 5190446</p>
+          <a
+            href="tel:+495615190446"
+            className="text-xl font-semibold text-primary hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"
+          >
+            Tel: 0561 - 5190446
+          </a>
         </div>
       </div>
     </div>

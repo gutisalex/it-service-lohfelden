@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import {
@@ -53,67 +53,88 @@ export function Navigation() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // Disable body scroll while the mobile menu is open
+  useEffect(() => {
+    document.body.classList.toggle("overflow-hidden", menuOpen);
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [menuOpen]);
+
   return (
-    <nav className="sticky top-0 z-50 border-b bg-background">
-      <div className="container mx-auto flex h-20 items-center justify-between px-4">
-        <Link
-          href="/"
-          className="flex shrink-0 items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"
-        >
-          <Image
-            src="/logo.png"
-            alt="IT-Service und Beratung Lohfelden"
-            width={320}
-            height={56}
-            className="h-16 w-auto object-contain"
-            priority
-          />
-          <span className="flex flex-col">
-            <span className="text-2xl font-bold italic text-primary leading-tight">
-              <span className="sr-only">IT</span> - Service und Beratung
-            </span>
-            <span className="text-xs font-bold italic text-foreground leading-tight text-center">
-              Reinhold Jodeit - Meisterbetrieb
-            </span>
-          </span>
-        </Link>
+    <>
+      {/* Mobile backdrop: blurs and darkens the page behind the open menu */}
+      <div
+        aria-hidden
+        className={cn(
+          "fixed inset-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity duration-200 md:hidden",
+          menuOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none",
+        )}
+      />
 
-        {/* Desktop: horizontal links */}
-        <ul className="hidden md:flex gap-6">
-          <NavLinks pathname={pathname} />
-        </ul>
-
-        {/* Mobile: burger menu with popover */}
-        <Popover open={menuOpen} onOpenChange={setMenuOpen}>
-          <PopoverTrigger asChild>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="md:hidden h-20 w-12 -mr-2 rounded-none"
-              aria-label={menuOpen ? "Menü schließen" : "Menü öffnen"}
-            >
-              {menuOpen ? (
-                <X className="size-5" aria-hidden />
-              ) : (
-                <Menu className="size-5" aria-hidden />
-              )}
-            </Button>
-          </PopoverTrigger>
-          <PopoverContent
-            align="end"
-            side="bottom"
-            sideOffset={0}
-            className="w-screen max-w-[100vw] relative left-1/2 -translate-x-1/2 rounded-none border-x-0 border-t-0 p-4 shadow-lg md:hidden"
+      <nav className="sticky top-0 z-50 border-b bg-background">
+        <div className="container mx-auto flex h-20 items-center justify-between px-4">
+          <Link
+            href="/"
+            className="flex shrink-0 items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"
           >
-            <ul className="flex flex-col gap-4">
-              <NavLinks
-                pathname={pathname}
-                onLinkClick={() => setMenuOpen(false)}
-              />
-            </ul>
-          </PopoverContent>
-        </Popover>
-      </div>
-    </nav>
+            <Image
+              src="/logo.png"
+              alt="IT-Service und Beratung Lohfelden"
+              width={320}
+              height={56}
+              className="h-16 w-auto object-contain"
+              priority
+            />
+            <span className="flex flex-col">
+              <span className="text-2xl font-bold italic text-primary leading-tight">
+                <span className="sr-only">IT</span> - Service und Beratung
+              </span>
+              <span className="text-xs font-bold italic text-foreground leading-tight text-center">
+                Reinhold Jodeit - Meisterbetrieb
+              </span>
+            </span>
+          </Link>
+
+          {/* Desktop: horizontal links */}
+          <ul className="hidden md:flex gap-6">
+            <NavLinks pathname={pathname} />
+          </ul>
+
+          {/* Mobile: burger menu with popover */}
+          <Popover open={menuOpen} onOpenChange={setMenuOpen}>
+            <PopoverTrigger asChild>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="md:hidden h-20 w-12 -mr-2 rounded-none"
+                aria-label={menuOpen ? "Menü schließen" : "Menü öffnen"}
+              >
+                {menuOpen ? (
+                  <X className="size-5" aria-hidden />
+                ) : (
+                  <Menu className="size-5" aria-hidden />
+                )}
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent
+              align="end"
+              side="bottom"
+              sideOffset={0}
+              className="w-screen max-w-[100vw] relative left-1/2 -translate-x-1/2 rounded-none border-x-0 border-t-0 p-4 shadow-lg md:hidden"
+            >
+              <ul className="flex flex-col gap-4">
+                <NavLinks
+                  pathname={pathname}
+                  onLinkClick={() => setMenuOpen(false)}
+                />
+              </ul>
+            </PopoverContent>
+          </Popover>
+        </div>
+      </nav>
+    </>
   );
 }

@@ -57,7 +57,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-linear-to-b from-primary/5 to-muted/50 min-h-[calc(100vh-5rem)] flex flex-col justify-center px-4 py-16">
+      <section className="relative overflow-hidden bg-linear-to-b from-primary/5 to-muted/50 min-h-[calc(100vh-5rem)] flex flex-col justify-center px-4 py-8 md:py-16">
         {/* Decorative background elements */}
         <div
           aria-hidden
@@ -92,7 +92,7 @@ export default function Home() {
 
             {/* Main heading */}
             <div className="space-y-3">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary leading-tight">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary leading-tight">
                 IT-Service und Beratung
                 <br />
                 <span className="text-foreground">Lohfelden</span>

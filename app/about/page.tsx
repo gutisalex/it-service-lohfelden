@@ -23,7 +23,7 @@ export default function AboutPage() {
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Über uns</h1>
           <p className="text-xl text-muted-foreground italic">
-            "Qualität spricht sich herum"
+            &ldquo;Qualität spricht sich herum&rdquo;
           </p>
         </div>
 
@@ -39,7 +39,7 @@ export default function AboutPage() {
             </CardHeader>
             <CardContent className="space-y-4 text-muted-foreground">
               <p>
-                "Qualität spricht sich herum" - das ist das Motto von Reinhold
+                &ldquo;Qualität spricht sich herum&rdquo; - das ist das Motto von Reinhold
                 Jodeit, dem Radio- und Fernsehtechnikmeister von IT-Service und
                 Beratung in Lohfelden.
               </p>

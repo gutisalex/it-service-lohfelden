@@ -17,9 +17,144 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://www.it-service-lohfelden.de";
+
 export const metadata: Metadata = {
-  title: "IT-Service und Beratung Lohfelden",
-  description: "Reparatur von TV-, Audio-, Hifi-Geräten, Computern, Kaffeevollautomaten und Installation von Satelliten-Antennen in Lohfelden",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "IT-Service und Beratung Lohfelden | Reinhold Jodeit",
+    template: "%s | IT-Service Lohfelden",
+  },
+  description:
+    "Ihr Fachbetrieb in Lohfelden für Reparatur von Fernsehern, Computern, Audio- & Hifi-Geräten, Kaffeevollautomaten sowie Installation von Satelliten-Antennen. Seit 2005 – Qualität spricht sich herum.",
+  keywords: [
+    "IT-Service Lohfelden",
+    "Fernseher Reparatur Lohfelden",
+    "Computer Reparatur Lohfelden",
+    "Hifi Reparatur Lohfelden",
+    "Kaffeevollautomat Reparatur Lohfelden",
+    "Satelliten-Antenne Installation Lohfelden",
+    "Reinhold Jodeit",
+    "Radio- und Fernsehtechnikermeister",
+    "IT-Service Kassel",
+    "Elektronik Reparatur Lohfelden",
+  ],
+  authors: [{ name: "Reinhold Jodeit" }],
+  creator: "Reinhold Jodeit",
+  publisher: "IT-Service und Beratung Lohfelden",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "de_DE",
+    url: siteUrl,
+    siteName: "IT-Service und Beratung Lohfelden",
+    title: "IT-Service und Beratung Lohfelden | Reinhold Jodeit",
+    description:
+      "Ihr Fachbetrieb in Lohfelden für Reparatur von Fernsehern, Computern, Audio- & Hifi-Geräten, Kaffeevollautomaten sowie Installation von Satelliten-Antennen. Seit 2005.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "IT-Service und Beratung Lohfelden",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IT-Service und Beratung Lohfelden | Reinhold Jodeit",
+    description:
+      "Ihr Fachbetrieb in Lohfelden für Reparatur von Fernsehern, Computern, Audio- & Hifi-Geräten, Kaffeevollautomaten sowie Installation von Satelliten-Antennen.",
+    images: ["/og-image.png"],
+  },
+  alternates: {
+    canonical: siteUrl,
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.it-service-lohfelden.de/#business",
+  name: "IT-Service und Beratung Lohfelden",
+  alternateName: "IT-Service Jodeit",
+  description:
+    "Fachbetrieb für Reparatur von Fernsehern, Computern, Audio- & Hifi-Geräten, Kaffeevollautomaten sowie Installation von Satelliten-Antennen in Lohfelden.",
+  url: "https://www.it-service-lohfelden.de",
+  telephone: "+49-561-5190446",
+  faxNumber: "+49-561-5190443",
+  foundingDate: "2005",
+  founder: {
+    "@type": "Person",
+    name: "Reinhold Jodeit",
+    jobTitle:
+      "Radio- und Fernsehtechnikermeister, Staatlich geprüfter Informatiker",
+  },
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Rundstraße 30",
+    addressLocality: "Lohfelden",
+    postalCode: "34253",
+    addressCountry: "DE",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 51.2765779,
+    longitude: 9.5474161,
+  },
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    description: "Termine nur nach Absprache",
+  },
+  areaServed: [
+    { "@type": "City", name: "Lohfelden" },
+    { "@type": "City", name: "Kassel" },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Dienstleistungen",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "TV Reparatur" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Computer Reparatur" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Satelliten-Antennen Installation",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Audio & Hifi Reparatur" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Kaffeevollautomat Reparatur",
+        },
+      },
+    ],
+  },
+  priceRange: "€€",
+  currenciesAccepted: "EUR",
+  paymentAccepted: "Cash, Bank Transfer",
 };
 
 export default function RootLayout({
@@ -29,6 +164,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${openSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >

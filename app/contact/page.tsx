@@ -1,4 +1,20 @@
+import type { Metadata } from "next";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
+export const metadata: Metadata = {
+  title: "Kontakt",
+  description:
+    "Kontaktieren Sie IT-Service und Beratung Lohfelden. Adresse: Rundstraße 30, 34253 Lohfelden. Telefon: 0561 - 5190446. Termine nur nach Absprache.",
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    title: "Kontakt | IT-Service Lohfelden",
+    description:
+      "Kontaktieren Sie IT-Service und Beratung Lohfelden. Adresse: Rundstraße 30, 34253 Lohfelden. Telefon: 0561 - 5190446.",
+    url: "/contact",
+  },
+};
 
 export default function ContactPage() {
   return (
@@ -20,8 +36,10 @@ export default function ContactPage() {
               <div>
                 <p className="font-semibold mb-1">Adresse</p>
                 <address className="not-italic text-muted-foreground">
-                  IT-Service und Beratung<br />
-                  Rundstraße 30<br />
+                  IT-Service und Beratung
+                  <br />
+                  Rundstraße 30
+                  <br />
                   34253 Lohfelden
                 </address>
               </div>
@@ -83,7 +101,8 @@ export default function ContactPage() {
             </div>
             <div className="mt-4 text-sm text-muted-foreground">
               <p className="mb-2">
-                Unser Ladengeschäft und unsere Werkstatt befinden sich in der Rundstraße 30 in Lohfelden.
+                Unser Ladengeschäft und unsere Werkstatt befinden sich in der
+                Rundstraße 30 in Lohfelden.
               </p>
               <a
                 href="https://www.openstreetmap.org/?mlat=51.2765779&mlon=9.5474161#map=16/51.2765779/9.5474161"
@@ -100,8 +119,9 @@ export default function ContactPage() {
         <div className="mt-12 text-center space-y-4 bg-muted/50 p-8 rounded-lg">
           <h2 className="text-2xl font-bold">Vor-Ort Service</h2>
           <p className="text-muted-foreground">
-            Auf Ihren Wunsch kommen wir auch bei Ihnen vorbei und erledigen durchführbare 
-            Reparaturen vor Ort. Rufen Sie uns an, um einen Termin zu vereinbaren.
+            Auf Ihren Wunsch kommen wir auch bei Ihnen vorbei und erledigen
+            durchführbare Reparaturen vor Ort. Rufen Sie uns an, um einen Termin
+            zu vereinbaren.
           </p>
         </div>
       </div>

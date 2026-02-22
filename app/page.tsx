@@ -1,6 +1,28 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+
+export const metadata: Metadata = {
+  title: "IT-Service und Beratung Lohfelden | Reinhold Jodeit",
+  description:
+    "Ihr Fachbetrieb in Lohfelden seit 2005: Reparatur von Fernsehern, Computern, Audio- & Hifi-Geräten, Kaffeevollautomaten sowie Installation von Satelliten-Antennen. Jetzt Termin vereinbaren!",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "IT-Service und Beratung Lohfelden | Reinhold Jodeit",
+    description:
+      "Ihr Fachbetrieb in Lohfelden seit 2005: Reparatur von Fernsehern, Computern, Audio- & Hifi-Geräten, Kaffeevollautomaten sowie Installation von Satelliten-Antennen.",
+    url: "/",
+  },
+};
 
 export default function Home() {
   return (
@@ -16,7 +38,8 @@ export default function Home() {
               Qualität spricht sich herum
             </p>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Ihr kompetenter Partner für Reparaturen und Beratung im Bereich TV, Computer, Audio, Hifi und Kaffeevollautomaten seit 2005
+              Ihr kompetenter Partner für Reparaturen und Beratung im Bereich
+              TV, Computer, Audio, Hifi und Kaffeevollautomaten seit 2005
             </p>
             <div className="flex gap-4 justify-center pt-4">
               <Button asChild size="lg">
@@ -34,17 +57,22 @@ export default function Home() {
       <section className="py-12 md:py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Unsere Dienstleistungen</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Unsere Dienstleistungen
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Wir bieten umfassende Reparatur- und Beratungsleistungen für Privatpersonen und Unternehmen
+              Wir bieten umfassende Reparatur- und Beratungsleistungen für
+              Privatpersonen und Unternehmen
             </p>
           </div>
-          
+
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <Card>
               <CardHeader>
                 <CardTitle>TV Service</CardTitle>
-                <CardDescription>Fernseher Reparatur & Installation</CardDescription>
+                <CardDescription>
+                  Fernseher Reparatur & Installation
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="list-disc pl-3 space-y-2 text-sm text-muted-foreground">
@@ -72,7 +100,9 @@ export default function Home() {
             <Card>
               <CardHeader>
                 <CardTitle>Antennen Service</CardTitle>
-                <CardDescription>Satelliten-Antennen Installation</CardDescription>
+                <CardDescription>
+                  Satelliten-Antennen Installation
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="list-disc pl-3 space-y-2 text-sm text-muted-foreground">
@@ -138,17 +168,24 @@ export default function Home() {
       <section className="bg-linear-to-b from-primary/5 to-muted/50 py-12 md:py-20 px-4">
         <div className="container mx-auto max-w-4xl">
           <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Über uns</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+              Über uns
+            </h2>
             <p className="text-lg text-muted-foreground">
-              Das 2005 in Lohfelden gegründete Unternehmen IT Service und Beratung wird von <strong>Reinhold Jodeit</strong>, 
-              Radio- und Fernsehtechnikermeister sowie staatlich geprüfter Informatiker, geleitet.
+              Das 2005 in Lohfelden gegründete Unternehmen IT Service und
+              Beratung wird von <strong>Reinhold Jodeit</strong>, Radio- und
+              Fernsehtechnikermeister sowie staatlich geprüfter Informatiker,
+              geleitet.
             </p>
             <p className="text-lg text-muted-foreground">
-              Durch kompetente Beratung helfen wir Ihnen, die richtige Entscheidung beim Kauf von Elektrogeräten zu treffen. 
-              In unserer Werkstatt sind wir in der Lage, nahezu jedes Problem schnellstmöglich zu beheben.
+              Durch kompetente Beratung helfen wir Ihnen, die richtige
+              Entscheidung beim Kauf von Elektrogeräten zu treffen. In unserer
+              Werkstatt sind wir in der Lage, nahezu jedes Problem
+              schnellstmöglich zu beheben.
             </p>
             <p className="text-lg text-muted-foreground">
-              Auf Wunsch kommen wir auch bei Ihnen vorbei und erledigen durchführbare Reparaturen vor Ort.
+              Auf Wunsch kommen wir auch bei Ihnen vorbei und erledigen
+              durchführbare Reparaturen vor Ort.
             </p>
             <div className="text-center pt-6">
               <Button asChild variant="outline" size="lg">
@@ -162,9 +199,12 @@ export default function Home() {
       {/* Contact CTA */}
       <section className="py-12 md:py-20 px-4 bg-primary/3">
         <div className="container mx-auto max-w-4xl text-center space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold">Kontaktieren Sie uns</h2>
+          <h2 className="text-3xl md:text-4xl font-bold">
+            Kontaktieren Sie uns
+          </h2>
           <p className="text-lg text-muted-foreground">
-            Rufen Sie noch heute bei uns an und lassen Sie sich einen Termin geben.
+            Rufen Sie noch heute bei uns an und lassen Sie sich einen Termin
+            geben.
           </p>
           <div className="space-y-2">
             <a
@@ -173,7 +213,9 @@ export default function Home() {
             >
               0561 - 5190446
             </a>
-            <p className="text-sm text-muted-foreground">Termine nur nach Absprache möglich</p>
+            <p className="text-sm text-muted-foreground">
+              Termine nur nach Absprache möglich
+            </p>
           </div>
           <Button asChild size="lg">
             <Link href="/contact">Kontaktformular</Link>

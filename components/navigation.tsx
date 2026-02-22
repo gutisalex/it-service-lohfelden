@@ -158,10 +158,10 @@ export function Navigation() {
               priority
             />
             <span className="flex flex-col">
-              <span className="text-2xl font-bold italic text-primary leading-tight">
+              <span className="text-xl md:text-2xl font-bold italic text-primary leading-tight">
                 <span className="sr-only">IT</span> - Service und Beratung
               </span>
-              <span className="text-xs font-bold italic text-foreground leading-tight text-center">
+              <span className="text-[11px] md:text-xs font-bold italic text-foreground leading-tight text-center">
                 Reinhold Jodeit - Meisterbetrieb
               </span>
             </span>

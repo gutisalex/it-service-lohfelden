@@ -1,5 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import {
+  Tv,
+  Monitor,
+  Radio,
+  Coffee,
+  Satellite,
+  MessageCircle,
+  Award,
+  MapPin,
+  Clock,
+  CheckCircle2,
+  ChevronDown,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -24,37 +37,125 @@ export const metadata: Metadata = {
   },
 };
 
+const serviceChips = [
+  { icon: Tv, label: "TV & Fernseher" },
+  { icon: Monitor, label: "Computer & PC" },
+  { icon: Radio, label: "Audio & Hifi" },
+  { icon: Coffee, label: "Kaffeevollautomaten" },
+  { icon: Satellite, label: "Satelliten-Antennen" },
+  { icon: MessageCircle, label: "Beratung" },
+];
+
+const trustBadges = [
+  { icon: Award, label: "Meisterbetrieb" },
+  { icon: Clock, label: "Seit 2005" },
+  { icon: MapPin, label: "Lohfelden & Kassel" },
+  { icon: CheckCircle2, label: "Vor-Ort-Service" },
+];
+
 export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="bg-linear-to-b from-primary/5 via-muted/50 to-background py-12 md:py-20 px-4">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center space-y-6">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary">
-              IT-Service und Beratung Lohfelden
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto italic">
-              Qualität spricht sich herum
-            </p>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+      <section className="relative overflow-hidden bg-linear-to-b from-primary/5 to-muted/50 min-h-[calc(100vh-5rem)] flex flex-col justify-center px-4 py-16">
+        {/* Decorative background elements */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 overflow-hidden"
+        >
+          {/* Subtle dot-grid pattern */}
+          <div
+            className="absolute inset-0 opacity-[0.08]"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle, currentColor 1px, transparent 1px)",
+              backgroundSize: "28px 28px",
+            }}
+          />
+        </div>
+
+        {/* Main content — vertically centred */}
+        <div className="relative container mx-auto max-w-5xl">
+          <div className="text-center space-y-8">
+            {/* Trust badges row */}
+            <div className="flex flex-wrap gap-2 justify-center">
+              {trustBadges.map(({ icon: Icon, label }) => (
+                <span
+                  key={label}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-semibold text-primary"
+                >
+                  <Icon className="size-3.5 shrink-0" aria-hidden />
+                  {label}
+                </span>
+              ))}
+            </div>
+
+            {/* Main heading */}
+            <div className="space-y-3">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary leading-tight">
+                IT-Service und Beratung
+                <br />
+                <span className="text-foreground">Lohfelden</span>
+              </h1>
+              {/* Slogan as a styled accent line */}
+              <p className="inline-flex items-center gap-2 text-base md:text-lg font-semibold italic text-primary/70">
+                <span className="h-px w-8 bg-primary/40 rounded-full" />
+                Qualität spricht sich herum
+                <span className="h-px w-8 bg-primary/40 rounded-full" />
+              </p>
+            </div>
+
+            {/* Sub-description */}
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Ihr kompetenter Partner für Reparaturen und Beratung im Bereich
-              TV, Computer, Audio, Hifi und Kaffeevollautomaten seit 2005
+              TV, Computer, Audio, Hifi und Kaffeevollautomaten —{" "}
+              <strong className="text-foreground font-semibold">
+                persönlich, zuverlässig, erfahren.
+              </strong>
             </p>
-            <div className="flex gap-4 justify-center pt-4">
-              <Button asChild size="lg">
+
+            {/* CTA buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
+              <Button asChild size="lg" className="shadow-md shadow-primary/20">
                 <Link href="/contact">Kontakt aufnehmen</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
                 <Link href="/services">Unsere Dienstleistungen</Link>
               </Button>
             </div>
+
+            {/* Service chips */}
+            <div className="pt-4 border-t border-border/60">
+              <p className="text-xs text-muted-foreground mb-3 uppercase tracking-widest font-medium">
+                Unsere Fachgebiete
+              </p>
+              <div className="flex flex-wrap gap-2 justify-center">
+                {serviceChips.map(({ icon: Icon, label }) => (
+                  <span
+                    key={label}
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-card px-3 py-1.5 text-sm text-muted-foreground shadow-sm hover:border-primary/30 hover:text-primary transition-colors"
+                  >
+                    <Icon className="size-4 shrink-0" aria-hidden />
+                    {label}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
+
+        {/* Bouncing scroll-down arrow */}
+        <a
+          href="#services"
+          aria-label="Zu den Dienstleistungen scrollen"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-muted-foreground hover:text-primary transition-colors animate-bounce"
+        >
+          <ChevronDown className="size-7" aria-hidden />
+        </a>
       </section>
 
       {/* Services Overview */}
-      <section className="py-12 md:py-20 px-4">
+      <section id="services" className="scroll-mt-20 py-12 md:py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">

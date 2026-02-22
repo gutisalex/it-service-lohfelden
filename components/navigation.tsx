@@ -147,14 +147,14 @@ export function Navigation() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex shrink-0 items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"
+            className="flex shrink items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"
           >
             <Image
               src="/logo.png"
               alt="IT-Service und Beratung Lohfelden"
               width={320}
               height={56}
-              className="h-16 w-auto object-contain"
+              className="h-14 w-auto object-contain md:h-16"
               priority
             />
             <span className="flex flex-col">
